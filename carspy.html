@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="src/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="src/js/progressbar/progressbar.css"/>
+		<link rel="stylesheet" type="text/css" href="src/css/main.css" />
+	</head>
+	<body>
+		<div class="carspy-main">
+			<div class="map" id="map"></div>
+			<div class="title">车辆监控平台轨迹播放模块演示</div>
+			<div class="progtool-box-posi">
+				<div class="progtool-box" id="progtool_box">
+					<div class="progtool-btns">
+						<input id="progtool_play" class="progtool-btn progtool-play" type="button" disabled>
+						<input id="progtool_pause" class="progtool-btn progtool-pause" type="button" disabled>
+						<input id="progtool_reset" class="progtool-btn progtool-reset" type="button" disabled>
+					</div>
+					<div class="progtool-bar">
+						<div class="progtool-fit" id="progtool_fit"><div class="progtool-percent" id="progtool_percent"></div></div>
+						<div class="progtool-now" id="progtool_now"></div>
+					</div>
+				</div>
+			</div>
+			<div class="info">
+				<div style="font-size: 18px;">性能演示</div>
+				<ul>
+					<li>输入不均匀坐标（个）：1197</li>
+					<li>输出均匀化坐标（个）：4272</li>
+				</ul>
+				<div class="info-line"></div>
+				<div class="info-type">
+					<input type="checkbox" id="chkAniline" checked/>
+					<label for="chkAniline">动态绘制线条</label>
+				</div>
+				<div class="info-type">
+					<input type="checkbox" id="chkShowtime" checked/>
+					<label for="chkShowtime">显示定位时间</label>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script src="https://api.map.baidu.com/api?v=3.0&ak=CF15zMh68adlHkaq5Vyl2NCe9wYuqlfr"></script>
+	<script src="src/lib/jquery/1.9.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="src/js/progressbar/progressbar.js" type="text/javascript" charset="utf-8"></script>
+	<script src="src/js/jquery.gpsline.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function() {
+			$.getJSON("src/js/mock.json", function(data) {
+				var gpsLine = new GpsLine({
+					gpsMapId: 'map', //地图
+					gpsCarnum: '粤DBM188', //车牌号
+					gpsPoints: data.points, //坐标集合
+					gpsDrawType: 1, //画线方式[0全部 ,1边走边画 ,2不绘制]
+					gpsDrawIcon: false, //画线方式0显示圆点
+					gpsDriveBar: true,
+					gpsBegin: 'progtool_play', //播放进度 开始Id
+					gpsPause: 'progtool_pause', //播放进度 暂停Id
+					gpsStop: 'progtool_reset', //播放进度 停止Id
+					gpsStep: 1, //步长（单位：坐标）
+					gpsStepSecond: 20, //车辆移动时间间隔（ 配合gpsStep参数使用, 单位：ms）
+				})
+				$("#chkAniline").change(function(){
+					setTimeout(function(){
+						gpsLine.changeType();
+					},100)
+				});
+				$("#chkShowtime").change(function(){
+					var isChecked = $(this).is(':checked');
+					if(isChecked){
+						gpsLine.labelShow();
+					}else{
+						gpsLine.labelHide();
+					}
+				});
+			})
+		})
+	</script>
+</html>
