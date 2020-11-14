@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d2218de"],{cb9b:function(t,e,n){"use strict";n.r(e),e["default"]={name:"BarSpace",props:{width:{type:String,default:""}},render:function(t){return t("div",{style:{maxWidth:this.width},attrs:{class:"bar-space","flex-box":"1"}},[])}}}}]);

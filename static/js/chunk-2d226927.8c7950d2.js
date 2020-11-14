@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d226927"],{e8db:function(e,n,s){"use strict";s.r(n);var t=function(){var e=this,n=e.$createElement,s=e._self._c||n;return s("div",[e._v("历史登记记录")])},l=[],u={name:"PossessPersonDetail"},a=u,c=s("2877"),o=Object(c["a"])(a,t,l,!1,null,null,null);n["default"]=o.exports}}]);

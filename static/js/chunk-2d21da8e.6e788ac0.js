@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d21da8e"],{d1f1:function(e,t,n){"use strict";n.r(t);var a=function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("detail",{attrs:{"is-edit":!0}})},i=[],l=n("801b"),s={name:"EditDetail",components:{Detail:l["a"]}},c=s,u=n("2877"),d=Object(u["a"])(c,a,i,!1,null,null,null);t["default"]=d.exports}}]);

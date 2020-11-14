@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d225f98"],{e74d:function(e,t,n){"use strict";n.r(t);var a=function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("detail",{attrs:{"is-edit":!0}})},i=[],l=n("df21"),r={name:"EditTheoryPaper",components:{Detail:l["a"]}},s=r,c=n("2877"),o=Object(c["a"])(s,a,i,!1,null,null,null);t["default"]=o.exports}}]);

@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d21a9c8"],{bbf8:function(e,n,t){"use strict";t.r(n);var a=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("router-view")},r=[],u={name:"DataPerson"},c=u,l=t("2877"),o=Object(l["a"])(c,a,r,!1,null,null,null);n["default"]=o.exports}}]);
