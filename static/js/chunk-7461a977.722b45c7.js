@@ -1,1 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-7461a977"],{"1e25d":function(e,t,n){"use strict";n.r(t);var a=function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("detail",{attrs:{"is-edit":!1}})},l=[],o=n("a0df"),s={name:"CreateRoom",components:{Detail:o["a"]}},c=s,i=n("2877"),r=Object(i["a"])(c,a,l,!1,null,null,null);t["default"]=r.exports}}]);

@@ -1,1 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0d34f3"],{"5be5":function(n,e,t){"use strict";t.r(e);var c=function(){var n=this,e=n.$createElement,t=n._self._c||e;return t("div",[n._v("缴费账户设置")])},u=[],l={name:"AccountSetting"},a=l,i=t("2877"),o=Object(i["a"])(a,c,u,!1,null,null,null);e["default"]=o.exports}}]);
